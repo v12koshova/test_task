@@ -1,0 +1,17 @@
+.form {
+    padding: 30px;
+}
+
+.button {
+    @include e(element) {
+        &:hover {
+            background: #564adb;
+            border-radius: 8px;
+        }
+
+        &:active {
+            background: #5748ff;
+        }
+    }
+
+}

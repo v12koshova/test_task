@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="i/house.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header__element logo">
+        <div>
+          <h1>Quo.</h1>
+          <p>Mortgage calculator</p>
+        </div>
+      </div>
+      <div class="header__element button">
+        <a href="calcPage.html" class="button__element">calculator page</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main__element head">
+        <div class="head__img-box">
+          <img class="head__img" src="i/girl.png" alt="">
+        </div>
+        <div class="head__element" id="title">
+          <h2>The calculus behind mortgage payments is complicated, but Quo Mortgage
+            Calculator makes this math problem quick and easy.</h2>
+          <div class="head__element button button_c">
+            <button id="create-btn" class="button__element">Create new bank</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="main__element main__element_content">
+        <div class="banks" id="banks"></div>
+
+      </div>
+    </div>
+
+
+    <div class="main__element modal" id="modal">
+      <div class="modal-form">
+        <input class="modal-form__element" type="text" id="name" placeholder="Bank name">
+        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="rate" placeholder="Interest rate, %">
+        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="maxLoan" placeholder="Maximum loan, $">
+        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="minPayload" placeholder="Minimum down payment, %">
+        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="term" placeholder="Loan term, years">
+        <button class="modal-form__element modal-form__element_button" id="create-bank">Create bank</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/ssm.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

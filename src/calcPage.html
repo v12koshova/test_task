@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="i/house.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__element">
+                <h1>Quo.</h1>
+                <p>Mortgage calculator</p>
+            </div>
+            <div class="header__element button">
+                <a href="index.html" class="button__element">main page</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content__element calc-form">
+                <h2 class="calc-form__title">Enter your details below and choose the bank to estimate your monthly
+                    mortgage payment</h2>
+                <div class="calc-form__header form">
+                    <div class="form__element set">
+                        <div class="set__element input">
+                            <p class="input__label">Initial loan, $</p>
+                            <input class="input__form" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" id="loan" placeholder="300000">
+                        </div>
+                        <div class="set__element input">
+                            <p class="input__label">Down payment, $</p>
+                            <input class="input__form" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" id="payment" placeholder="60000">
+                        </div>
+                    </div>
+                    <div class="form__element">
+                        <p>Bank name</p>
+                        <div class="select-box">
+                            <div class="options" id="options">
+                              
+                            </div>
+                    
+                            <div class="selected" id="selected">
+                                Enter the name or select from dropdown
+                            </div>
+                    
+                            <div class="search">
+                              <input type="text" placeholder="Start Typing..." />
+                            </div>
+                          </div>
+                    
+                    </div>
+
+
+
+                    <div class="form__element button button_c button_calc">
+                        <button class="button__element" id="calculate">calculate</button>
+                    </div>
+                </div>
+                <div class="calc-form__results results" id="result">
+                    <img class="results__img" src="i/house.svg" alt="">
+                    <div class="results__description description">
+                        <h3 class="description__element">Your monthly payment</h3>
+                        <p class="description__element" id="monthlyPayment"></p>
+                        <p class="description__element" id="loanTerm"></p>
+                        <button class="description__element description__element_button" id="details-btn">Show details</button>
+                    </div>
+                </div>
+
+                <div class="calc-form__warning warning" id="warning">
+                    <p class="warning__description">
+                        <span class="warning__span">Check the entered data</span>
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="content__element details" id="details">
+                <div class="details__element details-item">
+                    <h3 class="details-item details-item_def">Mortgage Payment</h3>
+                    <h3 class="details-item details-item_num" id="mortPay">0</h3>
+                </div>
+                <div class="details__element details-item">
+                    <p class="details-item details-item_def">Initial loan</p>
+                    <p class="details-item details-item_num" id="estPay">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Loan amount</p>
+                    <p class="details-item details-item_num" id="loanAmount">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Down payment</p>
+                    <p class="details-item details-item_num" id="downPay">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Total Out-of-Pocket</p>
+                    <p class="details-item details-item_num" id="totOutOfPocket">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Total Interest Paid</p>
+                    <p class="details-item details-item_num" id="interestPaid">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Interest rate</p>
+                    <p class="details-item details-item_num" id="interestRate">0</p>
+                </div>
+                <div class="details__element">
+                    <p class="details-item details-item_def">Loan term</p>
+                    <p class="details-item details-item_num" id="term">0</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="js/scriptCalc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+head {
+    font-size: 20px;
+
+    @include e(element) {
+        max-width: 700px;
+    }
+}
