@@ -29,6 +29,7 @@ const jsCalc = [
   path.resolve(__dirname, "src/js/ssm.min.js"),
   
   path.resolve(__dirname, "src/js/modulesCalculatePage/index.js"),
+  path.resolve(__dirname, "src/js/modulesCalculatePage/calculateMinDownpayload.js"),
   path.resolve(__dirname, "src/js/modulesCalculatePage/handleCalculate.js"),
   path.resolve(__dirname, "src/js/modulesCalculatePage/handleClean.js"),
   path.resolve(__dirname, "src/js/modulesCalculatePage/validateBanks.js"),

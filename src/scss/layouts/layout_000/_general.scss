@@ -120,13 +120,56 @@ h1 {
   min-width: 250px;
   display: flex;
   flex-direction: column;
+  
+
+}
+
+.input {
+  width: 100%;
+  @include m(dollar) {
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      content: '$';
+      position: absolute;
+      top: 12px;
+      right: 4%;
+    }
+  }
+
+  @include m(percent) {
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      content: '%';
+      position: absolute;
+      top: 12px;
+      right: 6%;
+    }
+  }
+
+  @include m(container) {
+    display: flex;
+    border: none;
+    padding: 0;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
 
   @include e(element) {
     margin-bottom: 10px;
-    padding: 12px 24px;
+    padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid $main;
+    width: 100%;
+
     @include m(button) {
       border: 1px solid $main;
       border-radius: 8px;
@@ -134,9 +177,19 @@ h1 {
       color: $main;
       padding: 12px;
     }
+
+
+    
+
+  }
+  @include m(box) {
+    display: grid;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+    grid-template-columns: 2fr 1fr;
   }
 }
-
 
 .banks {
   margin: 50px auto 100px auto;
@@ -198,17 +251,17 @@ h1 {
 
 }
 
-.input {
-  @include e(form) {
-    width: 90%;
-    padding: 5px;
-    padding: 12px 24px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid $main;
-    ;
-  }
-}
+// .input-box {
+//   @include e(form) {
+//     width: 90%;
+//     padding: 5px;
+//     padding: 12px 24px;
+//     box-sizing: border-box;
+//     border-radius: 8px;
+//     border: 1px solid $main;
+//     ;
+//   }
+// }
 
 .description {
   @include e(element) {

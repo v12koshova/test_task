@@ -48,12 +48,32 @@
 
     <div class="main__element modal" id="modal">
       <div class="modal-form">
-        <input class="modal-form__element" type="text" id="name" placeholder="Bank name">
-        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="rate" placeholder="Interest rate, %">
-        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="maxLoan" placeholder="Maximum loan, $">
-        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="minPayload" placeholder="Minimum down payment, %">
-        <input class="modal-form__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="term" placeholder="Loan term, years">
-        <button class="modal-form__element modal-form__element_button" id="create-bank">Create bank</button>
+        <div class="input">
+          <input class="input__element" type="text" id="name" placeholder="Bank name">
+        </div>
+        <div class="input input_percent">
+          <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="rate"
+            placeholder="Interest rate">
+        </div>
+        <div class="input input_dollar">
+          <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number"
+            id="maxLoan" placeholder="Maximum loan">
+        </div>
+        <div class="input input_container">
+          <div class="input input_dollar">
+            <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number"
+              id="minPayloadDollar" placeholder="Minimum down payment">
+          </div>
+          <div class="input input_percent">
+            <input class="input__element input__element_payload" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              type="number" id="minPayload" placeholder="Minimum down payment">
+          </div>
+        </div>
+        <div class="input">
+          <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number" id="term"
+            placeholder="Loan term, years">
+        </div>
+        <button class="input__element input__element_button" id="create-bank">Create bank</button>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ function setBanks(screen) {
         if (screen == 'tablet' || document.documentElement.clientWidth < 767) {
             for (let i = 0; i < addedBanks.length; i++) {
                 const bankWrap = createElement('div', {
-                    className: 'banks__element bank col-xl-4 col-md-12 col-lg-6 me-1'
+                    className: 'banks__element bank'
                 })
                 const bankName = createElement('h2', {
                     className: 'bank__element bank__element_name',
@@ -16,8 +16,8 @@ function setBanks(screen) {
                     textContent: "Interest rate"
                 })
                 const bankRate = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].rate}`
+                    className: 'bank__element',
+                    textContent: `${(+addedBanks[i].rate).toFixed(2)}%`
                 })
 
                 const bankMaxLoanDest = createElement('p', {
@@ -25,24 +25,24 @@ function setBanks(screen) {
                     textContent: "Maximum loan"
                 })
                 const bankMaxLoan = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].maxLoan}`
+                    className: 'bank__element',
+                    textContent: `${addedBanks[i].maxLoan}$`
                 })
                 const bankMinPayloadDest = createElement('p', {
                     className: 'bank__element bank__element_designation',
                     textContent: "Minimum down payment"
                 })
                 const bankMinPayload = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].minPayload}`
+                    className: 'bank__element',
+                    textContent: `${(+addedBanks[i].minPayload).toFixed(2)}%`
                 })
                 const bankTermDest = createElement('p', {
                     className: 'bank__element bank__element_designation',
                     textContent: "Loan term"
                 })
                 const bankTerm = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].term}`
+                    className: 'bank__element',
+                    textContent: `${(+addedBanks[i].term).toFixed(2)}%`
                 })
                 const bankDelete = createElement('button', {
                     className: 'bank__element bank__element_delete',
@@ -51,7 +51,7 @@ function setBanks(screen) {
                 })
                 const bankChange = createElement('button', {
                     className: 'bank__element bank__element_change',
-                    textContent: 'Change',
+                    textContent: 'Edit',
                     id: `${addedBanks[i].id}`,
                     name: 'changeBtn'
                 })
@@ -68,19 +68,19 @@ function setBanks(screen) {
             })
             const bankRateDest = createElement('p', {
                 className: 'bank__element bank__element_designation',
-                textContent: "Interest rate"
+                textContent: "Interest rate, %"
             })
             const bankMaxLoanDest = createElement('p', {
                 className: 'bank__element bank__element_designation',
-                textContent: "Maximum loan"
+                textContent: "Maximum loan, $"
             })
             const bankMinPayloadDest = createElement('p', {
                 className: 'bank__element bank__element_designation',
-                textContent: "Minimum down payment"
+                textContent: "Minimum down payment, %"
             })
             const bankTermDest = createElement('p', {
                 className: 'bank__element bank__element_designation',
-                textContent: "Loan term"
+                textContent: "Loan term, years"
             })
 
             banksHeader.append(bankNumDest, bankRateDest, bankMaxLoanDest, bankMinPayloadDest, bankTermDest)
@@ -101,23 +101,23 @@ function setBanks(screen) {
                 })
 
                 const bankRate = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].rate}`
+                    className: 'bank__element',
+                    textContent: `${(+addedBanks[i].rate).toFixed(2)}%`
                 })
 
 
                 const bankMaxLoan = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].maxLoan}`
+                    className: 'bank__element',
+                    textContent: `${addedBanks[i].maxLoan}$`
                 })
 
                 const bankMinPayload = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
-                    textContent: `${addedBanks[i].minPayload}`
+                    className: 'bank__element',
+                    textContent: `${(+addedBanks[i].minPayload).toFixed(2)}%`
                 })
 
                 const bankTerm = createElement('p', {
-                    className: 'bank__element bank__element_interest-rate',
+                    className: 'bank__element',
                     textContent: `${addedBanks[i].term}`
                 })
                 const bankDelete = createElement('button', {

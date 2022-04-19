@@ -28,14 +28,23 @@
                     mortgage payment</h2>
                 <div class="calc-form__header form">
                     <div class="form__element set">
-                        <div class="set__element input">
-                            <p class="input__label">Initial loan, $</p>
-                            <input class="input__form" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" id="loan" placeholder="300000">
-                        </div>
-                        <div class="set__element input">
-                            <p class="input__label">Down payment, $</p>
-                            <input class="input__form" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" id="payment" placeholder="60000">
-                        </div>
+                        <div class="set__element input-box">
+                            <p class="input-box__label">Initial loan, $</p>
+                            <div class="input input_dollar">
+                            <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="text" id="loan" placeholder="300000">
+                        </div></div>
+                        <div class="set__element input-box">
+
+                            <p class="input-box__label">Down payment</p>
+                            <div class="input-box input_box">
+                                <div class="input input_dollar">
+                                <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number"
+                                  id="paymentDollar" placeholder="60000"></div>
+                                  <div class="input input_percent">
+                                <input class="input__element" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" type="number"
+                                  id="payment" placeholder="20"></div>
+                              </div>
+                           </div>
                     </div>
                     <div class="form__element">
                         <p>Bank name</p>
@@ -44,7 +53,7 @@
                               
                             </div>
                     
-                            <div class="selected" id="selected">
+                            <div class="selected" data-id="selected" id="selected">
                                 Enter the name or select from dropdown
                             </div>
                     

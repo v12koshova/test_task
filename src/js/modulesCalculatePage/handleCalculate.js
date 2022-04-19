@@ -1,6 +1,6 @@
 function handleCalculate() {
     const loan = document.getElementById("loan"),
-        payment = document.getElementById("payment"),
+        payment = document.getElementById("paymentDollar"),
         warning = document.getElementById("warning"),
         res = document.getElementById("result")
 
@@ -13,9 +13,8 @@ function handleCalculate() {
         return
     }
     const sel = document.getElementById("selected");
-    const val = sel.textContent;
-
-    const selectionBank = addedBanks.find(item => item.id.startsWith(val));
+    const selId = sel.getAttribute('data-id')
+    const selectionBank = addedBanks.find(item => item.id === selId);
 
     if (!selectionBank) {
         sel.classList.add('error')

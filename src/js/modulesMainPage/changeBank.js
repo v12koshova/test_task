@@ -9,6 +9,7 @@ function changeBank(e) {
     info.name.value = targetBank.name
     info.rate.value = targetBank.rate
     info.maxLoan.value = targetBank.maxLoan
+    info.minPayloadDollar.value = (targetBank.maxLoan * targetBank.minPayload / 100),
     info.minPayload.value = targetBank.minPayload
     info.term.value = targetBank.term
 

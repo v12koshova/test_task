@@ -16,6 +16,7 @@ function onSelect() {
 optionsList.forEach(item => {
   item.addEventListener("click", () => {
     selected.innerHTML = item.querySelector("label").innerHTML;
+    selected.dataset.id = item.querySelector("label").getAttribute('for')
     optionsBox.classList.remove("active");
   });
 });
